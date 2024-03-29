@@ -1,18 +1,12 @@
-import { LayoutDashboard, 
-    Layers, 
-    BarChart2, 
-    Building2,
-    Sprout,
-    CreditCardIcon,
-} from "lucide-react";
-
+import { LayoutDashboard, Layers, BarChart2, Building2, Sprout, CreditCardIcon, Settings} from "lucide-react";
 import Link from "next/link";
 import { ReactElement } from "react";
-type LinksType = {
-    name:string;
-    path: string;
-    icon:ReactElement;
-}[]
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+
+type LinksType = {name:string; path: string; icon:ReactElement; }[]
+
 const Links:LinksType  = [
     {name:"Dashboard", path:"/", icon:<LayoutDashboard/>},
     {name:"Banking", path:"/banking", icon:<Layers/>},
@@ -25,14 +19,19 @@ const Links:LinksType  = [
  
 export default function Navicons({}) {
    return (
-     <div className="flex flex-wrap py-4 w-full">
-        <ul  className="flex flex-col gap-4 flex-grow justify-between items-center">
+     <div className="flex flex-wrap py-2 w-full">
+        <div  className="flex flex-col gap-2 flex-grow justify-between items-center">
             {Links.map((link, index) => (
-                <li key={index} className="w-full flex justify-between items-center">
-                    <Link href={link.path} className=" relative flex self-center flex-grow">{link.icon} <span className="px-4 self-center text-center"> {link.name}</span></Link>
+                <li key={index} className={` w-full ${buttonVariants({ variant: "ghost" })}`} >
+                    <Link href={link.path} className=" relative flex self-center w-full flex-grow">{link.icon} <span className={`px-4 self-center text-left `}> {link.name}</span></Link>
                 </li>
             ))}
-        </ul>
+
+           <div className={`border-t-2 my-4 w-full flex flex-grow self-center justify-between ${buttonVariants( {variant:"ghost"} )}`}>
+            <p className="relative py-6 font-semibold flex items-center w-full flex-grow"><Settings/> <span className="px-4 self-center text-left font-semibold">Settings</span></p>
+           </div> 
+        </div>
+        
      </div>
    )
  }
