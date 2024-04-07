@@ -19,16 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-sans antialiased flex items-start justify-between', fontSans.variable)}>
+      <body className={cn('font-sans antialiased flex', fontSans.variable)}>
         <ThemeProvider 
          attribute="class"
          defaultTheme="system"
          enableSystem
          disableTransitionOnChange
         >
-        <nav><Navbar/></nav>
-        <main className=" w-full h-full">
-          <div className="pl-2 pt-4"><ModeToggle/></div>
+        <nav className="h-screen"><Navbar/></nav>
+        <main className="relative w-full">
+          <div className="p-4 absolute top-0 right-0"><ModeToggle/></div>
           <div className="p-8">{children}</div> 
         </main>
         </ThemeProvider>

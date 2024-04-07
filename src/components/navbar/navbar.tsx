@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 export default function Navbar() {
   const [expanded, setExpanded] = useState(true);
   return (
-    <div className="relative h-screen border-r-2">
+    <div className="relative h-full border-r-2">
       <div className="flex flex-col justify-between items-center p-4 pb-6 w-full flex-grow">
 
         <div className="flex justify-between items-center m-4 w-full flex-grow">
