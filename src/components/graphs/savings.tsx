@@ -49,7 +49,7 @@ export default function Savings() {
               {
                 label: 'Savings Goal',
                 data: [100, 120, 115, 134, 168, 132, 200],
-                borderColor: 'red',
+                borderColor: 'skyblue',
                 backgroundColor: 'rgba(255, 0, 0, 0.1)',
               },
             ],

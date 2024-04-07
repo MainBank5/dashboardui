@@ -21,7 +21,7 @@ const BarchartLayout = () => {
       {
         label:'369',
         data:[10, 15, 9, 20, 25, 30, 15],
-        backgroundColor:'blue',
+        backgroundColor:'white',
         borderColor:'black',
         borderWidth:1,
       }
@@ -42,8 +42,8 @@ const BarchartLayout = () => {
     <>
       <Card>
     <CardHeader>
-      <CardTitle>$ Bar Chart</CardTitle>
-      <CardDescription>A bar chart is</CardDescription>
+      <CardTitle>$ 32,000</CardTitle>
+      <CardDescription>Assets</CardDescription>
     </CardHeader>
     <CardContent>
       <Bar
