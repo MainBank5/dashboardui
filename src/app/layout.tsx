@@ -29,7 +29,7 @@ export default function RootLayout({
         <nav><Navbar/></nav>
         <main className="relative w-full">
           <div className="pt-6">
-            <div className="absolute right-0"><ModeToggle/></div>
+            <div className="absolute right-0 top-0 px-2"><ModeToggle/></div>
             {children}
           </div>
         </main>

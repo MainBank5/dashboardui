@@ -3,7 +3,7 @@
 export default function Watchlist() {
   return (
     <div>
-        <h1>Stock watchlist goes here</h1>
+        <h1>Stock watchlist goes </h1>
     </div>
   )
 }
