@@ -1,9 +1,10 @@
+import { Card } from "@/components/ui/card";
 
 
 export default function Watchlist() {
   return (
-    <div>
+    <Card>
         <h1>Stock watchlist goes </h1>
-    </div>
+    </Card>
   )
 }

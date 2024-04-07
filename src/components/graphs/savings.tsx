@@ -1,6 +1,14 @@
 'use client'
 import { ResponsiveBump } from '@nivo/bump'
-
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } from "@/components/ui/card"
+  
 const MyResponsiveBump = (props :any) =>  {
    return <ResponsiveBump
         data={props.data}
@@ -354,9 +362,15 @@ export default function Savings () {
         }
       ]
   return (
-    <div className="w-full h-[400px]">
-        <MyResponsiveBump data= {data} />
-    </div>
+    <Card className="w-full">
+        <CardHeader>
+            <CardTitle>$1,244</CardTitle>
+            <CardDescription>Monthly Spending</CardDescription>
+        </CardHeader>
+        <CardContent className=' grid gap-4 h-[300px]'>
+            <MyResponsiveBump data= {data} />
+        </CardContent>
+    </Card>
   )
 }
 

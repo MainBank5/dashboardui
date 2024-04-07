@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-sans antialiased flex', fontSans.variable)}>
+      <body className={cn('font-sans antialiased flex items-start justify-between', fontSans.variable)}>
         <ThemeProvider 
          attribute="class"
          defaultTheme="system"
@@ -27,11 +27,9 @@ export default function RootLayout({
          disableTransitionOnChange
         >
         <nav><Navbar/></nav>
-        <main className="relative w-full">
-          <div className="pt-6">
-            <div className="absolute right-0 top-0 px-2"><ModeToggle/></div>
-            {children}
-          </div>
+        <main className=" w-full h-full">
+          <div className="pl-2 pt-4"><ModeToggle/></div>
+          <div className="p-8">{children}</div> 
         </main>
         </ThemeProvider>
       </body>
