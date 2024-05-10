@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/navbar/navbar";
 import ModeToggle from "@/components/theme/Themeswitcher";
 import { ThemeProvider } from "@/components/theme/Themeprovider";
 const fontSans = FontSans({ subsets: ["latin"], variable:"--font-sans", });
@@ -19,14 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-sans antialiased flex', fontSans.variable)}>
+      <body className={cn('font-sans antialiased', fontSans.variable)}>
         <ThemeProvider 
          attribute="class"
          defaultTheme="system"
          enableSystem
          disableTransitionOnChange
         >
-        <nav className="h-screen"><Navbar/></nav>
+        <nav className=""></nav>
         <main className="relative w-full">
           <div className="p-4 absolute top-0 right-0"><ModeToggle/></div>
           <div className="p-8">{children}</div> 

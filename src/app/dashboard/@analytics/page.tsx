@@ -1,4 +1,4 @@
-import Savings from "@/components/graphs/savings";
+import Savings from "@/components/charts/savings";
 
 
 export default function Analytics() {

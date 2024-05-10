@@ -33,7 +33,7 @@ export default function Savings() {
         <CardTitle>$1,244</CardTitle>
         <CardDescription>Monthly Spending</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-4 h-[300px]">
+      <CardContent className="grid text-white gap-4 h-[300px]">
         <Line
           data={{
             labels: [
@@ -47,7 +47,7 @@ export default function Savings() {
             ],
             datasets: [
               {
-                label: 'Savings Goal',
+                label: 'Spent',
                 data: [100, 120, 115, 134, 168, 132, 200],
                 borderColor: 'skyblue',
                 backgroundColor: 'rgba(255, 0, 0, 0.1)',

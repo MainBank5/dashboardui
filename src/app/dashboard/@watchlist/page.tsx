@@ -1,4 +1,4 @@
-import BarchartLayout  from "@/components/graphs/assets"
+import BarchartLayout  from "@/components/charts/assets"
 
 
 export default function Watchlist() {

@@ -45,7 +45,7 @@ const BarchartLayout = () => {
       <CardTitle>$ 32,000</CardTitle>
       <CardDescription>Assets</CardDescription>
     </CardHeader>
-    <CardContent>
+    <CardContent className='dark:text-white'>
       <Bar
       data={data}
       width={400}

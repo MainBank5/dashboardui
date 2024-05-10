@@ -22,13 +22,15 @@ export default function Navicons({ expanded }: { expanded: boolean }) {
         <div>
             <div className="flex flex-col gap-2 flex-grow w-full">
                 {Links.map((link, index) => (
-                    <Link key={index} href={link.path}  className={`relative overflow-hidden w-full ${buttonVariants({ variant: "ghost" })}`} >
+                    <Link key={index} href={link.path}  className={`relative overflow-hidden w-full group transition-colors ${buttonVariants({ variant: "ghost" })}`} >
                        
                             {link.icon} 
                             <span className={ cn('overflow-hidden transition-all', {"w-32 p-4": expanded === true}, {"w-0":expanded===false} )}>
                                 {link.name}
                             </span>
-                        
+                        {!expanded && <div className="absolute overflow-hidden left-full rounded-md px-1 ml-6 py-1 bg-slate-600 text-sm
+                        invisible opacity-0 -translate-x-10 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
+                        ">{link.name}</div>}
                     </Link>
                 ))}
 
